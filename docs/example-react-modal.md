@@ -23,7 +23,7 @@ const Modal = ({ onClose, children }) => {
 
   return ReactDOM.createPortal(
     <div onClick={onClose}>
-      <div onClick={e => e.stopPropagation()}>
+      <div onClick={(e) => e.stopPropagation()}>
         {children}
         <hr />
         <button onClick={onClose}>Close</button>

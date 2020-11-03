@@ -5,7 +5,7 @@ sidebar_label: Example
 ---
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import { Button, Text, TextInput, View } from 'react-native'
 import { fireEvent, render, waitFor } from '@testing-library/react-native'
 

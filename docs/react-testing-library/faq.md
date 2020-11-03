@@ -16,7 +16,7 @@ TL;DR:
 In summary:
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 test('change values via the fireEvent.change method', () => {
@@ -112,7 +112,7 @@ libraries. I don't want my tests to wait for animations to end.
 ```javascript
 jest.mock('react-transition-group', () => {
   const FakeTransition = jest.fn(({ children }) => children)
-  const FakeCSSTransition = jest.fn(props =>
+  const FakeCSSTransition = jest.fn((props) =>
     props.in ? <FakeTransition>{props.children}</FakeTransition> : null
   )
   return { CSSTransition: FakeCSSTransition, Transition: FakeTransition }

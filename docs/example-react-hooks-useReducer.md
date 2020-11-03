@@ -57,7 +57,7 @@ reducer state.
 ```jsx
 // example.test.js
 
-import React from 'react'
+import * as React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import Example from './example.js'
 

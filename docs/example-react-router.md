@@ -5,7 +5,7 @@ title: React Router
 
 ```jsx
 // app.js
-import React from 'react'
+import * as React from 'react'
 import { Link, Route, Switch, useLocation } from 'react-router-dom'
 
 const About = () => <div>You are on the about page</div>
@@ -48,7 +48,7 @@ export const App = () => (
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createMemoryHistory } from 'history'
-import React from 'react'
+import * as React from 'react'
 import { Router } from 'react-router-dom'
 
 import '@testing-library/jest-dom/extend-expect'

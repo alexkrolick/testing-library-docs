@@ -20,7 +20,7 @@ function Fade({ children, ...props }) {
 
 function HiddenMessage({ initialShow }) {
   const [show, setShow] = useState(initialShow || false)
-  const toggle = () => setShow(prevState => !prevState)
+  const toggle = () => setShow((prevState) => !prevState)
   return (
     <div>
       <button onClick={toggle}>Toggle</button>
@@ -33,7 +33,7 @@ function HiddenMessage({ initialShow }) {
 
 jest.mock('react-transition-group', () => {
   const FakeTransition = jest.fn(({ children }) => children)
-  const FakeCSSTransition = jest.fn(props =>
+  const FakeCSSTransition = jest.fn((props) =>
     props.in ? <FakeTransition>{props.children}</FakeTransition> : null
   )
   return { CSSTransition: FakeCSSTransition, Transition: FakeTransition }
@@ -56,7 +56,7 @@ test('you can mock things with jest.mock', () => {
 ## Shallow
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { render, fireEvent } from '@testing-library/react'
 
@@ -70,7 +70,7 @@ function Fade({ children, ...props }) {
 
 function HiddenMessage({ initialShow }) {
   const [show, setShow] = useState(initialShow || false)
-  const toggle = () => setShow(prevState => !prevState)
+  const toggle = () => setShow((prevState) => !prevState)
   return (
     <div>
       <button onClick={toggle}>Toggle</button>

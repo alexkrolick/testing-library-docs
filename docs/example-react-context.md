@@ -4,7 +4,7 @@ title: React Context
 ---
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import { NameContext, NameProvider, NameConsumer } from '../react-context'
@@ -53,7 +53,7 @@ test('NameProvider composes full name from first, last', () => {
   }
   customRender(
     <NameContext.Consumer>
-      {value => <span>Received: {value}</span>}
+      {(value) => <span>Received: {value}</span>}
     </NameContext.Consumer>,
     { providerProps }
   )

@@ -10,7 +10,7 @@ See the following sections for a detailed breakdown of the test
 
 ```jsx
 // __tests__/fetch.test.js
-import React from 'react'
+import * as React from 'react'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import { render, fireEvent, waitFor, screen } from '@testing-library/react'
@@ -68,7 +68,7 @@ test('handles server error', async () => {
 
 ```jsx
 // import dependencies
-import React from 'react'
+import * as React from 'react'
 
 // import API mocking utilities from Mock Service Worker
 import { rest } from 'msw'
@@ -208,13 +208,13 @@ export default function Fetch({ url }) {
   const fetchGreeting = async () => {
     axios
       .get(url)
-      .then(response => {
+      .then((response) => {
         const { data } = response
         const { greeting } = data
         dispatch({ type: 'SUCCESS', greeting })
         setButtonClicked(true)
       })
-      .catch(error => {
+      .catch((error) => {
         dispatch({ type: 'ERROR', error })
       })
   }

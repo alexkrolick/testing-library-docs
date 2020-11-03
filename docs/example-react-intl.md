@@ -81,7 +81,7 @@ Our custom `render` function can look like this:
 
 ```jsx
 // test-utils.js
-import React from 'react'
+import * as React from 'react'
 import { render as rtlRender } from '@testing-library/react'
 import { IntlProvider } from 'react-intl'
 
@@ -102,7 +102,7 @@ export { render }
 ## A complete example
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 // We're importing from our own created test-utils and not RTL's
 import { render, screen, setupTests } from '../test-utils.js'

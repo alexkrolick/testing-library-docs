@@ -167,7 +167,7 @@ renders its HTML directly in the body.
 This method is a shortcut for `console.log(prettyDOM(baseElement))`.
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import { render } from '@testing-library/react'
 
 const HelloWorld = () => <h1>Hello World</h1>
@@ -235,7 +235,7 @@ const TestComponent = () => {
   const [count, setCounter] = useState(0)
 
   return (
-    <button onClick={() => setCounter(count => count + 1)}>
+    <button onClick={() => setCounter((count) => count + 1)}>
       Click to increase: {count}
     </button>
   )

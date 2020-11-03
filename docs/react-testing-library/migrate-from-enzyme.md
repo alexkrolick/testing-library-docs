@@ -80,7 +80,7 @@ just have to import the following modules into your test file:
 
 ```jsx
 // import React so you can use JSX (React.createElement) in your test
-import React from 'react'
+import * as React from 'react'
 
 /**
  * render: lets us render the component (like how React would)
@@ -126,13 +126,13 @@ different name, and the template updates accordingly. Check the live version on
 [Codesandbox](https://codesandbox.io/s/ecstatic-hellman-fh7in)
 
 ```jsx
-const Welcome = props => {
+const Welcome = (props) => {
   const [values, setValues] = useState({
     firstName: props.firstName,
     lastName: props.lastName,
   })
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value })
   }
 
@@ -320,7 +320,7 @@ event with this component, here is the component:
 
 ```jsx
 // Checkbox.js
-import React from 'react'
+import * as React from 'react'
 const Checkbox = () => {
   return (
     <div>

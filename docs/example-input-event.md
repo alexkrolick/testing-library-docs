@@ -11,16 +11,16 @@ sidebar_label: Input Event
 > [`user-event`](ecosystem-user-event.md)
 
 ```jsx
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 function CostInput() {
   const [value, setValue] = useState('')
 
-  removeDollarSign = value => (value[0] === '$' ? value.slice(1) : value)
-  getReturnValue = value => (value === '' ? '' : `$${value}`)
-  
-  handleChange = ev => {
+  removeDollarSign = (value) => (value[0] === '$' ? value.slice(1) : value)
+  getReturnValue = (value) => (value === '' ? '' : `$${value}`)
+
+  handleChange = (ev) => {
     ev.preventDefault()
     const inputtedValue = ev.currentTarget.value
     const noDollarSign = removeDollarSign(inputtedValue)
@@ -28,13 +28,7 @@ function CostInput() {
     setValue(getReturnValue(noDollarSign))
   }
 
-    return (
-      <input
-        value={value}
-        aria-label="cost-input"
-        onChange={handleChange}
-      />
-    )
+  return <input value={value} aria-label="cost-input" onChange={handleChange} />
 }
 
 const setup = () => {
