@@ -6,7 +6,7 @@ title: rtl-simple-queries
 [`rtl-simple-queries`][gh] is a companion library for `React Testing Library`
 that provides an alternative query API.
 
-```
+```npm2yarn
 npm install --save-dev rtl-simple-queries
 ```
 

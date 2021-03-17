@@ -22,18 +22,9 @@
   },
   "lint-staged": {
     "linters": {
-      "*.js": [
-        "prettier --write",
-        "git add"
-      ],
-      "*.mdx": [
-        "prettier --write --parser=mdx",
-        "git add"
-      ],
-      "*.json": [
-        "prettier --write --parser=json",
-        "git add"
-      ]
+      "*.js": ["prettier --write", "git add"],
+      "*.mdx": ["prettier --write --parser=mdx", "git add"],
+      "*.json": ["prettier --write --parser=json", "git add"]
     }
   },
   "husky": {
@@ -42,9 +33,10 @@
     }
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.66",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.66",
+    "@docusaurus/core": "^2.0.0-alpha.72",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.72",
     "clsx": "^1.1.1",
+    "npm-to-yarn": "^1.0.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "remarkable": "^2.0.1"

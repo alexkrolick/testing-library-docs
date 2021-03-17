@@ -216,6 +216,7 @@ module.exports = {
         docs: {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          remarkPlugins: [require('./src/plugins/remark-npm2yarn')],
           editUrl:
             'https://github.com/testing-library/testing-library-docs/edit/master/',
           path: './docs',

@@ -6,7 +6,7 @@ title: testing-library-selector
 [`testing-library-selector`][gh] is a library for `@testing-library` that
 provides reusable selectors. Written in typescript.
 
-```
+```npm2yarn
 npm install --save-dev testing-library-selector
 ```
 
