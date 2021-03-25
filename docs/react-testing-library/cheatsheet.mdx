@@ -130,16 +130,18 @@ See [Events API](dom-testing-library/api-events.mdx)
 
 ## Other
 
-See [Helpers API](dom-testing-library/api-helpers.mdx),
-[Config API](dom-testing-library/api-configuration.mdx)
+See [Querying Within Elements](dom-testing-library/api-within),
+[Config API](dom-testing-library/api-configuration.mdx),
+[Cleanup](react-testing-library/api.mdx#cleanup),
 
 - **within** take a node and return an object with all the queries bound to the
   node (used to return the queries from `React Testing Library`'s render
   method): `within(node).getByText("hello")`
 - **configure** change global options:
   `configure({testIdAttribute: 'my-data-test-id'})`
-- **cleanup** clears the DOM ([use with `afterEach`](setup.mdx#cleanup) to reset
-  DOM between tests)
+- **cleanup** clears the DOM
+  ([use with `afterEach`](react-testing-library/api.mdx#cleanup) to reset DOM
+  between tests)
 
 ## Text Match Options
 

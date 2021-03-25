@@ -199,10 +199,10 @@ automatically cleans up the output for each test, so you don't need to call
 
 The other thing that you might notice is `getByRole` which has `heading` as its
 value. `heading` is the accessible role of the `h1` element. You can learn more
-about them on [queries](dom-testing-library/api-queries.mdx#byrole)
-documentation page. One of the things people quickly learn to love about Testing
-Library is how it encourages you to write more accessible applications (because
-if it's not accessible, then it's harder to test).
+about them on the [queries](queries/byrole.mdx) documentation page. One of the
+things people quickly learn to love about Testing Library is how it encourages
+you to write more accessible applications (because if it's not accessible, then
+it's harder to test).
 
 ### Test 2: Input texts must have correct value
 
@@ -242,9 +242,8 @@ default `role` values and you don't need to set one for them, but some others
 like `<div>` do not have one. You could use different approaches to access the
 `<div>` element, but we recommend trying to access elements by their implicit
 `role` to make sure your component is accessible by people with disabilities and
-those who are using screen readers. This
-[section](dom-testing-library/api-queries.mdx#byrole) of the query page might
-help you to understand better.
+those who are using screen readers. This [section](queries/byrole.mdx) of the
+query page might help you to understand better.
 
 > Keep in mind that a `<form>` must have a `name` attribute in order to have an
 > implicit `role` of `form` (as required by the specification).
@@ -258,7 +257,7 @@ it's not recommended for the reasons stated in this paragraph).
 
 We made some handy query APIs which help you to access the component elements
 very efficiently, and you can see the
-[list of available queries](dom-testing-library/api-queries.mdx) in detail.
+[list of available queries](queries/about.mdx#types-of-queries) in detail.
 
 Something else that people have a problem with is that they're not sure which
 query should they use, luckily we have a great page which explains

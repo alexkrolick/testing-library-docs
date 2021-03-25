@@ -15,9 +15,8 @@ sidebar_label: API
 ## `@testing-library/dom`
 
 This library re-exports everything from the DOM Testing Library
-(`@testing-library/dom`). See the
-[documentation](dom-testing-library/api-queries.mdx) to see what goodies you can
-use.
+(`@testing-library/dom`). See the [documentation](queries/about.mdx) to see what
+goodies you can use.
 
 ## `render`
 
@@ -33,21 +32,21 @@ const { results } = render(<YourComponent />, { options })
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `container`   | The HTML element the component is mounted to.                                                                                                                     | baseElement   |
 | `baseElement` | The root HTML element to which the container is appended to.                                                                                                      | document.body |
-| `queries`     | Queries to bind to the baseElement. See [getQueriesForElement](dom-testing-library/api-helpers.mdx#within-and-getqueriesforelement-apis).                         | null          |
+| `queries`     | Queries to bind to the baseElement. See [within](dom-testing-library/api-within.mdx).                                                                             | null          |
 | `hydrate`     | Used when the component has already been mounted and requires a rerender. Not needed for most people. The rerender function passed back to you does this already. | false         |
 | `wrapper`     | A parent component to wrap YourComponent.                                                                                                                         | null          |
 
 ### Results
 
-| Result        | Description                                                                                                                                                                |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `container`   | The HTML element the component is mounted to.                                                                                                                              |
-| `baseElement` | The root HTML element to which the container is appended to.                                                                                                               |
-| `debug`       | Logs the baseElement using [prettyDom](dom-testing-library/api-helpers.mdx#prettydom).                                                                                     |
-| `unmount`     | Unmounts the component from the container.                                                                                                                                 |
-| `rerender`    | Calls render again passing in the original arguments and sets hydrate to true.                                                                                             |
-| `asFragment`  | Returns the innerHTML of the container.                                                                                                                                    |
-| `...queries`  | Returns all [query functions](dom-testing-library/api-queries.mdx) to be used on the baseElement. If you pass in `query` arguments than this will be those, otherwise all. |
+| Result        | Description                                                                                                                                              |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `container`   | The HTML element the component is mounted to.                                                                                                            |
+| `baseElement` | The root HTML element to which the container is appended to.                                                                                             |
+| `debug`       | Logs the baseElement using [prettyDom](dom-testing-library/api-debugging.mdx#prettydom).                                                                 |
+| `unmount`     | Unmounts the component from the container.                                                                                                               |
+| `rerender`    | Calls render again passing in the original arguments and sets hydrate to true.                                                                           |
+| `asFragment`  | Returns the innerHTML of the container.                                                                                                                  |
+| `...queries`  | Returns all [query functions](queries/about.mdx) to be used on the baseElement. If you pass in `query` arguments than this will be those, otherwise all. |
 
 ## `cleanup`
 

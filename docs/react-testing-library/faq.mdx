@@ -211,7 +211,7 @@ test has already finished. There are 2 approaches to resolve it:
 1. Wait for the result of the operation in your test by using one of
    [the async utilities](dom-testing-library/api-async.mdx) like
    [wait](dom-testing-library/api-async.mdx#wait) or a
-   [`find*` query](dom-testing-library/api-queries.mdx#findby). For example:
+   [`find*` query](queries/about.mdx#types-of-queries). For example:
    `const userAddress = await findByLabel(/address/i)`.
 2. Mocking out the asynchronous operation so that it doesn't trigger state
    updates.
