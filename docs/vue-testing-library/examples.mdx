@@ -92,6 +92,49 @@ test('properly handles v-model', async () => {
 })
 ```
 
+## Example using `props`:
+
+```html
+<template>
+  <div>
+    <label>{{ label }}</label>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FormInput',
+  props: {
+    label: { type: String, default: 'Default label' }
+  },
+}
+</script>
+```
+
+```js
+import { render } from '@testing-library/vue'
+import FormInput from './FormInput.vue'
+
+it('renders the correct default state', () => {
+  const { getByText } = render(FormInput)
+
+  // Asserts initial state.
+  getByText('Default label')
+})
+
+it('renders the label prop', () => {
+  const props = {
+    label: 'The new label',
+  }
+  const { getByText } = render(FormInput, {
+    props,
+  })
+
+  getByText(props.label)
+})
+
+```
+
 ## More examples
 
 You'll find examples of testing with different libraries in
