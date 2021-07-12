@@ -24,6 +24,7 @@ getByRole(
     selected?: boolean,
     checked?: boolean,
     pressed?: boolean,
+    current?: boolean,
     expanded?: boolean,
     queryFallbacks?: boolean,
     level?: number,
@@ -161,6 +162,32 @@ For example in
 you can get the "👍" button by calling `getByRole('button', { pressed: true })`.
 To learn more about the pressed state see
 [ARIA `aria-pressed`](https://www.w3.org/TR/wai-aria-1.2/#aria-pressed).
+
+### `current`
+
+Elements can represent the current item within a container or set of related
+elements.
+
+Despite current have list of values: `date`, `location`, `page`, `step`, `time`,
+`true`, `false`
+
+You can filter the returned elements by their current status by setting
+`current: true` (for any valid value) or `current: false` (for false).
+
+For example in
+
+```html
+<body>
+  <section>
+    <link href="current/page" aria-current="true">👍</link>
+    <link href="another/page" aria-current="false">👎</link>
+  </section>
+</body>
+```
+
+you can get the "👍" link by calling `getByRole('button', { current: true })`.
+To learn more about the current status see
+[ARIA `aria-current`](https://www.w3.org/TR/wai-aria-1.2/#aria-current).
 
 ### `expanded`
 
