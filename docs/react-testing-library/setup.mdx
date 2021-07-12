@@ -19,6 +19,16 @@ require that you use Jest).
 Adding options to your global test config can simplify the setup and teardown of
 tests in individual files.
 
+## Safe cleanup
+
+`React Testing Library` will auto `cleanup` rendered components in all 
+frameworks that expose an `afterEach` API. Be warned, however, that any `async` 
+`afterEach` handlers you register that _defers_ the RTL `cleanup` call will 
+leave opporitunity for your rendered components to continue process react state
+updates and emit `act()` errors. If you implement custom async `afterEach` 
+handlers, it is recommended to call `cleanup` explicity before any async 
+behavior.
+
 ## Custom Render
 
 It's often useful to define a custom render method that includes things like
