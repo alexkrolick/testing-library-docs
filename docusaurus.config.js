@@ -39,6 +39,13 @@ module.exports = {
         pinned: false,
       },
       {
+        caption: 'CDK Global Inc.',
+        darkImage: '/img/users/cdkglobal.png',
+        lightImage: '/img/users/cdkglobal.png',
+        infoLink: 'https://www.cdkglobal.com/us',
+        pinned: false,
+      },
+      {
         caption: 'Expedia Group',
         darkImage: '/img/users/expediagroup.svg',
         lightImage: '/img/users/expediagroup.svg',
