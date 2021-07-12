@@ -89,6 +89,18 @@ debug). If you want to disable this, then set`showOriginalStackTrace` to
 `false`. You can also disable this for a specific call in the options you pass
 to `waitFor`.
 
+### `silentA11yWarn`
+
+The accessibility warning is nice! By default, `silentA11yWarn` have `false`
+value, and it's logging errors. But for some edge use-cases it can be good
+option to switch off this warning message. (For example when
+`dom-testing-library` using for testing-playground of Chrome extension. The user
+won't see logs in their console. Instead, logs appear on the extensions page,
+looking like something in the extension was broken.)
+
+To disable a accessibility warning logs just add `{silentA11yWarn: true}` as an
+option.
+
 ### `throwSuggestions` (experimental)
 
 When enabled, if [better queries](queries/about.mdx#priority) are available the
