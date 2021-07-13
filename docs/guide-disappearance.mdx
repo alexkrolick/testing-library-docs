@@ -20,7 +20,7 @@ when calling them._
 test('movie title appears', async () => {
   // element is initially not present...
   // wait for appearance and return the element
-  const movie = await findByText('the lion king')
+  const movie = await screen.findByText('the lion king')
 })
 ```
 
@@ -32,7 +32,7 @@ test('movie title appears', async () => {
 
   // wait for appearance inside an assertion
   await waitFor(() => {
-    expect(getByText('the lion king')).toBeInTheDocument()
+    expect(screen.getByText('the lion king')).toBeInTheDocument()
   })
 })
 ```
@@ -46,7 +46,7 @@ when the element is removed.
 ```jsx
 test('movie title no longer present in DOM', async () => {
   // element is removed
-  await waitForElementToBeRemoved(() => queryByText('the mummy'))
+  await waitForElementToBeRemoved(() => screen.queryByText('the mummy'))
 })
 ```
 
@@ -64,7 +64,7 @@ test('movie title goes away', async () => {
   // note use of queryBy instead of getBy to return null
   // instead of throwing in the query itself
   await waitFor(() => {
-    expect(queryByText('i, robot')).not.toBeInTheDocument()
+    expect(screen.queryByText('i, robot')).not.toBeInTheDocument()
   })
 })
 ```
